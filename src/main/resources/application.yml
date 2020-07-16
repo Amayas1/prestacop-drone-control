@@ -1,0 +1,24 @@
+server:
+    port: 2049
+spring:
+    kafka:
+        consumer:
+            bootstrap-servers: 0.0.0.0:6667
+            group-id: group_id
+            auto-offset-reset: earliest
+            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+            value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+        producer:
+            bootstrap-servers: 0.0.0.0:6667
+            key-serializer: org.apache.kafka.common.serialization.StringSerializer
+            value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+    mail:
+        protocol: smtp
+        host: smtp.gmail.com
+        port: 587
+        username: candidatureamayas@gmail.com
+        password: amayas007
+        properties.mail.smtp.trust: smtp.gmail.com
+        properties.mail.smtp.auth: true
+        properties.mail.smtp.starttls.enable: true
